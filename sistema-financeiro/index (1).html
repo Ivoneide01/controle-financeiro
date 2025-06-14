@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle Financeiro</title>
+    <link rel="stylesheet" href="/styles (1).css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>💰 Meu Controle Financeiro</h1>
+            <p>Organize suas receitas e despesas de forma simples</p>
+        </header>
+
+        <main>
+            <!-- Resumo Financeiro -->
+            <section class="resumo">
+                <div class="card saldo-total">
+                    <h2>Saldo Total</h2>
+                    <span id="saldo-total" class="valor-saldo">R$ 0,00</span>
+                </div>
+                <div class="card receitas-total">
+                    <h3>Total Receitas</h3>
+                    <span id="receitas-total" class="valor-receita">R$ 0,00</span>
+                </div>
+                <div class="card despesas-total">
+                    <h3>Total Despesas</h3>
+                    <span id="despesas-total" class="valor-despesa">R$ 0,00</span>
+                </div>
+            </section>
+
+            <!-- Formulários -->
+            <section class="formularios">
+                <div class="form-container">
+                    <h3>➕ Adicionar Receita</h3>
+                    <form id="form-receita">
+                        <input type="text" id="desc-receita" placeholder="Descrição (ex: Salário)" required>
+                        <input type="number" id="valor-receita" placeholder="Valor" step="0.01" required>
+                        <input type="date" id="data-receita" required>
+                        <button type="submit">Adicionar Receita</button>
+                    </form>
+                </div>
+
+                <div class="form-container">
+                    <h3>➖ Adicionar Despesa</h3>
+                    <form id="form-despesa">
+                        <input type="text" id="desc-despesa" placeholder="Descrição (ex: Conta de luz)" required>
+                        <input type="number" id="valor-despesa" placeholder="Valor" step="0.01" required>
+                        <input type="date" id="data-despesa" required>
+                        <button type="submit">Adicionar Despesa</button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Lista de Transações -->
+            <section class="transacoes">
+                <div class="transacoes-header">
+                    <h3>📋 Histórico de Transações</h3>
+                    <button id="limpar-dados" class="btn-limpar">🗑️ Limpar Tudo</button>
+                </div>
+                <div id="lista-transacoes" class="lista-transacoes">
+                    <p class="sem-transacoes">Nenhuma transação registrada ainda.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
